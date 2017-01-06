@@ -1,12 +1,17 @@
 var randomAlphaNumeric = function randomAlphaNumeric()
 {
-    var text = "";
-    var possible = "abcdefghijklmnopqrstuvwxyz0123456789";
+    // var to receive new random id
+    var rndID = "";
+    // lists of lowercase letter and numbers
+    var alphanumeric = "abcdefghijklmnopqrstuvwxyz0123456789";
 
+    //loop 5 times
     for( var i=0; i < 5; i++ ) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
+        //added each character grabbed at random locations from alphanumeric string
+        rndID += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
     }
-    return text;
+
+    return rndID;
 };
 
 module.exports = randomAlphaNumeric;
