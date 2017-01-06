@@ -1,4 +1,5 @@
 var url = require('url');
+var randomId = require("../modules/alphanumeric");
 
 module.exports = function (express) {
 
@@ -21,20 +22,25 @@ module.exports = function (express) {
     });
 
     router.post('/api/v1/:url', function (req, res) {
+        var thisHost = req.get("host");
+
+
         //get user input url
         var userUrl = req.params.url;
 
         //grab the first 3 char of the link
-        var newUrl = userUrl.substr(0,3);
+        var newUrl = "ly/" + userUrl.substr(0,3);
 
         //generate a random alphanumeric length of 4
+        newUrl += randomId();
 
         //get current url and take everything before 'api'
         //put everything before api, ly/ and the first 3 letters and
         // the random generated alphanumeric together to form a link
         //save with window local storage the new link and user provided url
+
         //provide the user with the new link
-        res.send(newUrl);
+        res.send(thisHost + "/" + newUrl);
     });
 
     router.get('/ly/:rmdurl', function (req, res) {
