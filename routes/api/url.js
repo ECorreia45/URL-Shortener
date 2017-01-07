@@ -1,6 +1,3 @@
-//import url generator module that provide with a new random url
-var generateUrl = require("../modules/urlGen");
-
 module.exports = function (express) {
 
     var router = express.Router();
@@ -9,7 +6,7 @@ module.exports = function (express) {
     router.get('/', function (req, res) {
        res.send(
            "\n** Welcome to the URL Shorten API\n\n" +
-           "'This API allows you to take any url and get a shorten version of it.'\n\n\n" +
+           "'This API allows you to take any url and get a shorten version of it.'\n\n" +
            "To Star using it:\n\n" +
            "step #1 => Add 'api' on the current url\n" +
            "step #2 => Add api version. 'v1' is the current and only version. " +
@@ -39,15 +36,6 @@ module.exports = function (express) {
             "\n\n\nCurrent Version: v1\n" +
             "Latest Version: v1\n"
         );
-    });
-
-    //Provide the user with the generated url
-    router.post('/api/v1/:url', function (req, res) {
-        //call for a new generated url
-        var newUrl = generateUrl(req.params.url);
-
-        //provide the user with the new link
-        res.send("Shorten url => " + newUrl + "\n\rFull path => " + req.get("host") + "/" + newUrl );
     });
 
     return router;

@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use("/", require('./routes/url')(express));
+app.use("/", require('./routes/')(express));
 
 var server = app.listen(port, function () {
    console.log("Ready to go at port " + port);
