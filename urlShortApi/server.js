@@ -16,3 +16,4 @@ var server = app.listen(port, function () {
 });
 
 module.export = server;
+module.export = app;
