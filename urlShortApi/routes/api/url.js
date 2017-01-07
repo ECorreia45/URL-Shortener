@@ -4,16 +4,17 @@ module.exports = function (express) {
 
     //Set the welcome message and basic API instruction on the base home url
     router.get('/', function (req, res) {
-       res.send(
-           "\n** Welcome to the URL Shorten API\n\n" +
-           "'This API allows you to take any url and get a shorten version of it.'\n\n" +
-           "To Star using it:\n\n" +
-           "step #1 => Add 'api' on the current url\n" +
-           "step #2 => Add api version. 'v1' is the current and only version. " +
-           "\n           So you would have 'api/v1'\n" +
-           "step #3 => Add the url without 'http://' and without 'www'. " +
-           "\n           For example 'api/v1/google.com' "
-       );
+       // res.send(
+       //     "\n** Welcome to the URL Shorten API\n\n" +
+       //     "'This API allows you to take any url and get a shorten version of it.'\n\n" +
+       //     "To Star using it:\n\n" +
+       //     "step #1 => Add 'api' on the current url\n" +
+       //     "step #2 => Add api version. 'v1' is the current and only version. " +
+       //     "\n           So you would have 'api/v1'\n" +
+       //     "step #3 => Add the url without 'http://' and without 'www'. " +
+       //     "\n           For example 'api/v1/google.com' "
+       // );
+        res.send("nice");
     });
 
     //Provide help with the next step to follow
@@ -34,10 +35,10 @@ module.exports = function (express) {
             "=> Do not include 'www' \n" +
             "\n     For example 'api/v1/google.com'\n\n" +
             "*** CRUD ****\n\n" +
-            "=> To get ALL Data type 'api/v1/url' with GET method\n" +
-            "=> To get ONE Data type 'api/v1/url/:id' with GET method\n" +
-            "=> To Delete ONE Data type 'api/v1/url/:id' with DELETE method\n" +
-            "=> To UPDATE ONE Data type 'api/v1/url/:id' with POST method\n" +
+            "=> To get ALL Data type 'api/v1/urls' with GET method\n" +
+            "=> To get ONE Data type 'api/v1/urls/:id' with GET method\n" +
+            "=> To Delete ONE Data type 'api/v1/urls/:id' with DELETE method\n" +
+            "=> To UPDATE ONE Data type 'api/v1/urls/:id' with POST method\n" +
             "\n\n\nCurrent Version: v1\n" +
             "Latest Version: v1\n\n"
         );

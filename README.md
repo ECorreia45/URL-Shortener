@@ -54,13 +54,13 @@ This API should be running at **port 3000** at your localhost. Use this link
 
 `` To CREATE a Link: ``  /api/v1/:url **POST method**
 
-`` To Get ALL Links: ``  /api/v1/url **GET method**
+`` To Get ALL Links: ``  /api/v1/urls **GET method**
 
-`` To Get Single Link: ``  /api/v1/url/:id  **GET method**
+`` To Get Single Link: ``  /api/v1/urls/:id  **GET method**
 
-`` To Update Single Record: ``  /api/v1/url/:id **POST method**
+`` To Update Single Record: ``  /api/v1/urls/:id **POST method**
 
-`` To DELETE Single Record: ``  /api/v1/url/:id  **DELETE method**
+`` To DELETE Single Record: ``  /api/v1/urls/:id  **DELETE method**
 
 Any further instruction of how to use this api is included with this program. 
 In the browser you should follow the instruction to fully enjoy this simple API
