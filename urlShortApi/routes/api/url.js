@@ -32,9 +32,14 @@ module.exports = function (express) {
             "** RULES ***\n\n" +
             "=> Do not include 'http://' \n" +
             "=> Do not include 'www' \n" +
-            "\n     For example 'api/v1/google.com'" +
+            "\n     For example 'api/v1/google.com'\n\n" +
+            "*** CRUD ****\n\n" +
+            "=> To get ALL Data type 'api/v1/url' with GET method\n" +
+            "=> To get ONE Data type 'api/v1/url/:id' with GET method\n" +
+            "=> To Delete ONE Data type 'api/v1/url/:id' with DELETE method\n" +
+            "=> To UPDATE ONE Data type 'api/v1/url/:id' with POST method\n" +
             "\n\n\nCurrent Version: v1\n" +
-            "Latest Version: v1\n"
+            "Latest Version: v1\n\n"
         );
     });
 
