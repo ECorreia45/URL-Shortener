@@ -26,7 +26,7 @@ A simple static api that allows the user to shorten any url
 
 5- Create Your .env file with followings:
 
-``DB_name = MariaDB``
+``DB_name = ``
 
 ``DB_user = ``
 
@@ -52,7 +52,7 @@ This API should be running at **port 3000** at your localhost. Use this link
 
 ### Perform CRUD
 
-`` To CREATE a Link: ``  /api/v1/:url **POST method**
+`` To CREATE a Link: ``  /api/v1/url/:url **POST method**
 
 `` To Get ALL Links: ``  /api/v1/urls **GET method**
 
