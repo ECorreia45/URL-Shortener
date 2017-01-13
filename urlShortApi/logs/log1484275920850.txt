@@ -1,0 +1,4 @@
+[1m[32minfo[39m[22m: [1m[32m" /api endpoint accessed successfully " [39m[22m[35m
+line: 9 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js[39m
+Status: [1m[32m200[39m[22m
+data: [1m[34mnull[39m[22m
