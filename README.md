@@ -24,6 +24,8 @@ A simple static api that allows the user to shorten any url
 
 ``npm install dotenv --save-dev``
 
+``npm install chalk --save``
+
 5- Create Your .env file with followings:
 
 ``DB_name = ``
@@ -39,6 +41,8 @@ A simple static api that allows the user to shorten any url
 ``DB_port = 3306``
 
 ``PORT = 3000``
+
+``DEBUG = false``
 
 ### Test it
 
@@ -65,4 +69,18 @@ This API should be running at **port 3000** at your localhost. Use this link
 Any further instruction of how to use this api is included with this program. 
 In the browser you should follow the instruction to fully enjoy this simple API
 
-> e.correia.design
+### Usage
+
+``Start debug mode from `` >> **Terminal**
+
+run command ``node server.js --debug true`` to activate **DEBUG MODE**
+
+run command ``node server.js --debug false`` to deactivate **DEBUG MODE**
+
+``Run API from any port from `` >> **Terminal**
+
+run command ``node server.js --port port#`` to specify a **PORT**
+
+**_______________________________________**
+
+> Author: Elson Correia
