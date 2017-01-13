@@ -1,9 +1,10 @@
-module.exports = function(express) {
-    const router = express.Router();
+module.exports = (express) => {
+  const router = express.Router();
 
-    router.use('/', require('./api/url')(express));
-    router.use('/', require('./api/crud')(express));
-    router.use('/', require('./api/go')(express));
+  /* eslint-disable global-require */
+  router.use('/', require('./api/url')(express));
+  router.use('/', require('./api/crud')(express));
+  router.use('/', require('./api/go')(express));
 
-    return router;
+  return router;
 };

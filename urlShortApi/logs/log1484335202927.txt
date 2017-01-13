@@ -1,4 +1,0 @@
-info: " Debug mode => true " 
-line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
-Status: OK
-data: nullata: null
