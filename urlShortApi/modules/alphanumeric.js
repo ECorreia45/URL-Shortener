@@ -1,3 +1,4 @@
+require('./debug');
 var randomAlphaNumeric = function randomAlphaNumeric()
 {
     // var to receive new random id
@@ -10,7 +11,8 @@ var randomAlphaNumeric = function randomAlphaNumeric()
         //added each character grabbed at random locations from alphanumeric string
         rndID += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
     }
-
+	
+    console.log("New random ID created: " + rndID);
     return rndID;
 };
 

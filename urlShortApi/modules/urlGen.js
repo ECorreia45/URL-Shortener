@@ -9,6 +9,7 @@ var generateUrl = function(url){
     //generate a random alphanumeric length of 5 and add it to the new url
     newUrl += randomId();
 
+    console.log("a random url was created | line 10 at " + __filename);
     return newUrl;
 };
 

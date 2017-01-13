@@ -1,6 +1,8 @@
 var go = require('../../modules/go');
 var http = require('http');
 
+const util = require('../../modules/debug');
+
 module.exports = function (express) {
 
     var router = express.Router();
@@ -11,12 +13,12 @@ module.exports = function (express) {
             shortURL: "/go/" + req.params.url
         };
         go.find(url, function (err) {
+			util.debug('error', err, '11', '500', JSON.stringify(err));
             res.status(500).json(err);
         }, function (data) {
             res.setHeader('Content-Type', 'text/html');
-            res.redirect(302, data.url);
+			res.redirect(302, data.url);
         });
     });
-
     return router;
 };
