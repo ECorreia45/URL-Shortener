@@ -1,0 +1,11 @@
+================ Log of 1 13 2017 =====
+
+#info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null

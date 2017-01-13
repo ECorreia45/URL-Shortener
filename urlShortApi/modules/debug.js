@@ -33,11 +33,18 @@ exports.debug = function (type, msg, location, status, data) {
 		var logMsg = type + ': ' + '" ' + msg +  ' " ' + '\nline: ' + location + ' at ' + __filename + '\nStatus: ' +
 		status + "\ndata: " + data;
 		
-		fs.writeFile("urlShortApi/logs/log"+date.getTime()+".txt", logMsg.trim(), function (err) {
+		var file = `log_${date.getMonth() + 1}_${date.getDate()}_${date.getFullYear()}.txt`;
+		var title = `================ Log of ${date.getMonth() + 1} ${date.getDate()} ${date.getFullYear()} =====`;
+		
+		fs.writeFile(`urlShortApi/logs/${file}`, title, function (err) {
 			if(err){
-				console.log("Couldn't save the log message to log file");
+				console.log(`Couldn't create log "urlShortApi/logs/${file}"`);
 			}else{
-				console.log("Log message saved to ./urlShortApi/logs");
+				fs.appendFile(`urlShortApi/logs/${file}`, `\n\n#${logMsg.trim()}`, function (err) {
+					if(err){
+						console.log(`Couldn't save the log message to "urlShortApi/logs/${file}"`);
+					}
+				});
 			}
 		});
 		
