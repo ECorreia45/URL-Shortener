@@ -1,4 +1,0 @@
-info: " /api endpoint accessed successfully " 
-line: 9 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
-Status: 200
-data: null
