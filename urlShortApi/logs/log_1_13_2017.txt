@@ -9,3 +9,101 @@ data: null
 line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
 Status: OK
 data: null
+
+#info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:50 43] | info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:50 43] | info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:51 5] | 
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:51 5] | 
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:51 14]
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+#at: [15:51 14]
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+time: [15:51 50]
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+time: [15:51 50]
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+time: [15:52 55]
+info: " Ready to go at port => 3000 " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
+
+time: [15:52 55]
+info: " Debug mode => true " 
+line: 19 at /Users/ecorreia/Sites/_tests/URL_Shortner_API/urlShortApi/modules/debug.js
+Status: OK
+data: null
