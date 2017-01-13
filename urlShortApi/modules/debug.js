@@ -10,7 +10,8 @@ exports.debug = function (type, msg, location, status, data) {
 	var tp, st, mesg;
 	var dta = chalk.bold.blue;
 	var loc = chalk.magenta;
-	
+	var tim = chalk.cyan;
+
 	switch (type){
 		case "info":
 			tp = chalk.bold.green;
@@ -51,7 +52,7 @@ exports.debug = function (type, msg, location, status, data) {
 			}
 		});
 		
-		console.log(mode, time + tp(type) + ': ' + mesg('" ' + msg +  ' " ') + loc('\nline: ' + location + ' at ' + __filename) + '\nStatus: ' +
+		console.log(mode, tim(time) + tp(type) + ': ' + mesg('" ' + msg +  ' " ') + loc('\nline: ' + location + ' at ' + __filename) + '\nStatus: ' +
 			st(status) + "\ndata: " + dta(data));
 	}
 };
