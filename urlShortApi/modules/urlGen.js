@@ -1,17 +1,18 @@
-//load alphanumeric module that generates random alphanumeric id of length 5
-var randomId = require("./alphanumeric");
+const util = require('./debug');
 
-var generateUrl = function(url){
+// load alphanumeric module that generates random alphanumeric id of length 5
+const randomId = require('./alphanumeric');
 
-    //grab the first 3 char of the link and include the basic path
-    var newUrl = "/go/" + url.substr(0, 3);
+const generateUrl = (url) => {
+  // grab the first 3 char of the link and include the basic path
+  let newUrl = `/go/${url.substr(0, 3)}`;
 
-    //generate a random alphanumeric length of 5 and add it to the new url
-    newUrl += randomId();
+  // generate a random alphanumeric length of 5 and add it to the new url
+  newUrl += randomId();
 
-    console.log("a random url was created | line 10 at " + __filename);
-    return newUrl;
+  util.debug('info', 'Random url created', ['11', __filename], 'OK', newUrl);
+  return newUrl;
 };
 
-//export this module
+// export this module
 module.exports = generateUrl;

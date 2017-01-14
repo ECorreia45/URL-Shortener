@@ -12,19 +12,21 @@ A simple static api that allows the user to shorten any url
 
 ``npm install express --save``
 
-3- This project also uses **body-parser** so:
-
-``npm install body-parser --save-dev``
-
-4- Install database dependencies **sequelize**, **mysql** and **dotenv** so:
+3- Install all the **dependencies**:
 
 ``npm install sequelize --save-dev``
 
-``npm install mysql --save-dev``
+``npm install body-parser --save-dev``
 
 ``npm install dotenv --save-dev``
 
 ``npm install chalk --save``
+
+4- Install all the **devDependencies**:
+
+``npm install eslint --save-dev`` to conform airbnb rules
+
+``npm install mysql --save-dev``
 
 5- Create Your .env file with followings:
 
@@ -48,7 +50,7 @@ A simple static api that allows the user to shorten any url
 
 * From terminal, run this command
 
-``node server.js``
+``node urlShortApi/server.js``
 
 This API should be running at **port 3000** at your localhost. Use this link 
 
@@ -71,15 +73,15 @@ In the browser you should follow the instruction to fully enjoy this simple API
 
 ### Usage
 
-``Start debug mode from `` >> **Terminal**
+> Start debug mode from >> **Terminal**
 
-run command ``node server.js --debug true`` to activate **DEBUG MODE**
+run command ``node urlShortApi/server.js --debug true`` to activate **DEBUG MODE**
 
-run command ``node server.js --debug false`` to deactivate **DEBUG MODE**
+run command ``node urlShortApi/server.js --debug false`` to deactivate **DEBUG MODE**
 
-``Run API from any port from `` >> **Terminal**
+> Run API from any port from  >> **Terminal**
 
-run command ``node server.js --port port#`` to specify a **PORT**
+run command ``node urlShortApi/server.js --port port#`` to specify a **PORT**
 
 **_______________________________________**
 

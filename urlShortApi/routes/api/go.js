@@ -10,7 +10,7 @@ module.exports = (express) => {
       shortURL: `/go/${req.params.url}`,
     };
     go.find(url, (err) => {
-      util.debug('error', err, '11', '500', JSON.stringify(err));
+      util.debug('error', err, ['11', __filename], '500', JSON.stringify(err));
       res.status(500).json(err);
     }, (data) => {
       res.setHeader('Content-Type', 'text/html');

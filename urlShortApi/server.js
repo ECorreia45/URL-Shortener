@@ -17,8 +17,8 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/')(express));
 
 const server = app.listen(process.env.PORT, () => {
-  util.debug('info', `Ready to go at port => ${process.env.PORT}`, '19', 'OK', null);
-  util.debug('info', `Debug mode => ${process.env.DEBUG}`, '19', 'OK', null);
+  util.debug('info', `Ready to go at port => ${process.env.PORT}`, ['19', __filename], 'OK', null);
+  util.debug('info', `Debug mode => ${process.env.DEBUG}`, ['19', __filename], 'OK', null);
 });
 
 module.exports = server;
