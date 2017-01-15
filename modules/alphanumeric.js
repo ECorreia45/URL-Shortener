@@ -1,6 +1,6 @@
 const util = require('./debug');
 
-const randomAlphaNumeric = () => {
+var randomAlphaNumeric = () => {
   // const to receive new random id
   let rndID = '';
   // lists of lowercase letter and numbers
@@ -12,7 +12,7 @@ const randomAlphaNumeric = () => {
     rndID += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
   }
 
-  util.debug('info', 'New random ID created', ['10', __filename], 'OK', rndID);
+  // util.debug('info', 'New random ID created', ['10', __filename], 'OK', rndID);
   return rndID;
 };
 
