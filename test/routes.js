@@ -1,8 +1,9 @@
-const should = require('chai'),
-expect = require('chai').expect,
-supertest = require('supertest'),
-app = supertest('http://localhost:3000');
+const expect = require('chai').expect;
+const supertest = require('supertest');
 
+const app = supertest('http://localhost:3000');
+
+/* global describe it:true */
 // Test the server
 describe('Server', () => {
   // Test the server homepage
@@ -21,7 +22,6 @@ describe('Server', () => {
     });
   });
   // Test CRUD capabilities
-  console.log('Make sure you setup a test Database on your .env file');
   describe('CRUD', () => {
     // Test posting the data to the DB
     it('Post through /api/v1/url/:url just fine', (done) => {
@@ -30,7 +30,7 @@ describe('Server', () => {
     // Test updating one data on DB
     it('Update through /api/v1/urls/1 just fine', (done) => {
       app.post('/api/v1/urls/1').set('Content-Type','application/json')
-        .send({id: '2', url: 'unittest.com', shortURL: '/go/uni00ezg'})
+        .send({ id: '2', url: 'unittest.com', shortURL: '/go/uni00ezg' })
         .expect(200)
         .end(done);
     });
@@ -46,5 +46,5 @@ describe('Server', () => {
     it('Delete through /api/v1/urls/2 just fine', (done) => {
       app.delete('/api/v1/urls/2').expect(200).end(done);
     });
-  })
+  });
 });

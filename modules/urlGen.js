@@ -2,7 +2,7 @@
 // load alphanumeric module that generates random alphanumeric id of length 5
 const randomId = require('./alphanumeric');
 
-var generateUrl = (url) => {
+const generateUrl = (url) => {
   // grab the first 3 char of the link and include the basic path
   let newUrl = `/go/${url.substr(0, 3)}`;
 

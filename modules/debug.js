@@ -1,7 +1,6 @@
 require('dotenv').config();
 const chalk = require('chalk');
 const fs = require('fs');
-const util = require('./debug.js');
 
 const date = new Date();
 
@@ -16,15 +15,14 @@ exports.debug = (type, msg, location, status, data) => {
     const dta = chalk.bold.blue;
     const loc = chalk.magenta;
     const tim = chalk.cyan;
-    // this switch checks for the type of message sent and style message, status and type accordingly
-    if(type === 'error'){
+    if (type === 'error') { /* this if checks for the type of message sent and style message, status and type accordingly */
       tp = chalk.bold.red;
       st = chalk.bold.red;
       mesg = chalk.bold.red;
-    }else if(type === 'warn'){
+    } else if (type === 'warn') {
       tp = chalk.bold.yellow;
       mesg = chalk.bold.yellow;
-    }else{
+    } else {
       tp = chalk.bold.green;
       st = chalk.bold.green;
       mesg = chalk.bold.green;
@@ -41,17 +39,16 @@ exports.debug = (type, msg, location, status, data) => {
     // check if the log file does not exists to create it and set a title
     if (!fs.existsSync(`logs/${file}`)) {
       fs.writeFile(`logs/${file}`, title, (err) => {
-        if (err) throw(err)
+        if (err) throw (err);
       });
     }
     // append log message to the log file PS: this will create the file if couldnt find it
     fs.appendFile(`logs/${file}`, `\n\n${time}${logMsg.trim()}`, (err) => {
-      if (err) throw(err);
+      if (err) throw (err);
     });
     /* eslint-disable no-console */
     console.log(`${mode}${tim(time)}${tp(type)}: ${mesg(msg)}\n${loc(`line: ${location[0]} at ${location[1]}`)}\nStatus: ${st(status)}\ndata: ${dta(data)}`);
-    return logMsg;
-  }else{
+  } else {
     console.log = null;
   }
 };

@@ -1,4 +1,4 @@
-var db = require('./db');
+const db = require('./db');
 
 exports.create = (usrURL, err, success) => {
   db.siteLink.create(usrURL).then(success).catch(err);
