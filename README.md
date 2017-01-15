@@ -22,11 +22,17 @@ A simple static api that allows the user to shorten any url
 
 ``npm install chalk --save``
 
+``npm install supertest --save``
+
+``npm install chai --save``
+
 4- Install all the **devDependencies**:
 
 ``npm install eslint --save-dev`` to conform airbnb rules
 
 ``npm install mysql --save-dev``
+
+``npm install mocha --save-dev``
 
 5- Create Your .env file with followings:
 
@@ -50,7 +56,7 @@ A simple static api that allows the user to shorten any url
 
 * From terminal, run this command
 
-``node urlShortApi/server.js``
+``node server.js``
 
 This API should be running at **port 3000** at your localhost. Use this link 
 
@@ -75,14 +81,22 @@ In the browser you should follow the instruction to fully enjoy this simple API
 
 > Start debug mode from >> **Terminal**
 
-run command ``node urlShortApi/server.js --debug true`` to activate **DEBUG MODE**
+run command ``node server.js --debug true`` to activate **DEBUG MODE**
 
-run command ``node urlShortApi/server.js --debug false`` to deactivate **DEBUG MODE**
+run command ``node server.js --debug false`` to deactivate **DEBUG MODE**
 
 > Run API from any port from  >> **Terminal**
 
-run command ``node urlShortApi/server.js --port port#`` to specify a **PORT**
+run command ``node server.js --port port#`` to specify a **PORT**
+
+#####Unit Testing
+
+> Start unit testing with mocha >> **Terminal**
+
+run command ``mocha``
+
+########_we advise setting up your .env file with the testing database for this_
 
 **_______________________________________**
 
-> Author: Elson Correia
+> Author: _Elson Correia_

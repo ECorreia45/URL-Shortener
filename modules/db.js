@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const seq = new Sequelize(
-  process.env.DB_name,
+  db_name = process.env.DB_name,
   process.env.DB_user,
   process.env.DB_pass,
   {
@@ -30,4 +30,3 @@ seq.sync();
 
 exports.seq = seq;
 exports.siteLink = siteLink;
-

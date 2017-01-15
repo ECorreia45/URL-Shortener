@@ -52,6 +52,7 @@ module.exports = (express) => {
 
   // Update a single url
   router.post('/api/v1/urls/:id', (req, res) => {
+    req.body.id = req.params.id;
     url.update(req.body, (err) => {
       util.debug('error', err, ['56', __filename], '500', JSON.stringify(err));
       res.status(500).json(err);
