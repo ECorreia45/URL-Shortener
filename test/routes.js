@@ -40,7 +40,7 @@ describe('Server', () => {
     });
     // Test updating one data on DB
     it('Update through /api/v1/urls/:id just fine', (done) => {
-      app.post('/api/v1/urls/6').set('Content-Type','application/json')
+      app.post('/api/v1/urls/1').set('Content-Type','application/json')
         .send({url: 'unittest.com', shortURL: '/go/uni00ezg'})
         .expect(200)
         .end(done);
