@@ -17,20 +17,18 @@ exports.debug = (type, msg, location, status, data) => {
     const loc = chalk.magenta;
     const tim = chalk.cyan;
     // this switch checks for the type of message sent and style message, status and type accordingly
-    switch (type) {
-      case 'error':
-        tp = chalk.bold.red;
-        st = chalk.bold.red;
-        mesg = chalk.bold.red;
-        break;
-      case 'warn':
-        tp = chalk.bold.yellow;
-        mesg = chalk.bold.yellow;
-        break;
-      default :
-        tp = chalk.bold.green;
-        st = chalk.bold.green;
-        mesg = chalk.bold.green;}
+    if(type === 'error'){
+      tp = chalk.bold.red;
+      st = chalk.bold.red;
+      mesg = chalk.bold.red;
+    }else if(type === 'warn'){
+      tp = chalk.bold.yellow;
+      mesg = chalk.bold.yellow;
+    }else{
+      tp = chalk.bold.green;
+      st = chalk.bold.green;
+      mesg = chalk.bold.green;
+    }
     // get current date and hour to be append to a log msg
     // set a log msg to be append to the log file
     // create a file name based on date and hour
@@ -43,21 +41,18 @@ exports.debug = (type, msg, location, status, data) => {
     // check if the log file does not exists to create it and set a title
     if (!fs.existsSync(`logs/${file}`)) {
       fs.writeFile(`logs/${file}`, title, (err) => {
-        if (err) {
-          util.debug('error', `Couldn't create log "urlShortApi/logs/${file}"`, ['43', __filename], '500', null);
-        }
+        if (err) throw(err)
       });
     }
     // append log message to the log file PS: this will create the file if couldnt find it
     fs.appendFile(`logs/${file}`, `\n\n${time}${logMsg.trim()}`, (err) => {
-      if (err) {
-        util.debug('error', `Couldn't save the log message to "urlShortApi/logs/${file}"`, ['43', __filename], '500', null);
-      }
+      if (err) throw(err);
     });
     /* eslint-disable no-console */
     console.log(`${mode}${tim(time)}${tp(type)}: ${mesg(msg)}\n${loc(`line: ${location[0]} at ${location[1]}`)}\nStatus: ${st(status)}\ndata: ${dta(data)}`);
+    return logMsg;
   }else{
-    console.log = () => {};
+    console.log = null;
   }
 };
 

@@ -2,6 +2,7 @@ require('dotenv').config();
 const expect = require('chai').expect,
 alphaNum = require('../modules/alphanumeric'),
 db = require('../modules/db'),
+debug = require('../modules/debug'),
 urlGen = require('../modules/urlGen');
 
 describe('Modules', () => {
@@ -27,5 +28,8 @@ describe('Modules', () => {
       expect(db.seq.config.port).to.equal(process.env.DB_port);
       expect(db.seq.options.dialect).to.equal(process.env.DB_schema);
     })
+  });
+  describe('Debug', () => {
+    it('Debug should be fine');
   })
 });

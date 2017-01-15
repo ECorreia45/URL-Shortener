@@ -1,14 +1,8 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-let db_name;
-if(process.env.DEBUG == 'true')
-  db_name = process.env.DB_Test_name;
-else
-  db_name = process.env.DB_name;
-
 const seq = new Sequelize(
-  db_name,
+  db_name = process.env.DB_name,
   process.env.DB_user,
   process.env.DB_pass,
   {
