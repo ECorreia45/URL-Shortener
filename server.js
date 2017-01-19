@@ -22,5 +22,3 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 module.exports = server;
-
-
