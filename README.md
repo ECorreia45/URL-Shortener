@@ -3,38 +3,16 @@ A simple static api that allows the user to shorten any url
 
 >This a very exciting promising projects that intends to provide the user to take long junk of url and make it simple to share with others without it looking long, inviting and spammy.
 
-### Instalation
+### Installation
 
 1- Download this to your localhost folder. 
 > Ex: /Sites **on mac**
 
-2- Assuming you already have node and npm installed in your machine, from terminal or command prompt navigate to this project folder and **install express**
+2- Assuming you already have node and npm installed in your machine, from terminal or command prompt navigate to this project folder
 
-``npm install express --save``
+``npm install``
 
-3- Install all the **dependencies**:
-
-``npm install sequelize --save-dev``
-
-``npm install body-parser --save-dev``
-
-``npm install dotenv --save-dev``
-
-``npm install chalk --save``
-
-``npm install supertest --save``
-
-``npm install chai --save``
-
-4- Install all the **devDependencies**:
-
-``npm install eslint --save-dev`` to conform airbnb rules
-
-``npm install mysql --save-dev``
-
-``npm install mocha --save-dev``
-
-5- Create Your .env file with followings:
+3- Create Your .env file with followings:
 
 ``DB_name = ``
 
@@ -52,7 +30,7 @@ A simple static api that allows the user to shorten any url
 
 ``DEBUG = false``
 
-### Test it
+### Serve it
 
 * From terminal, run this command
 
@@ -89,13 +67,11 @@ run command ``node server.js --debug false`` to deactivate **DEBUG MODE**
 
 run command ``node server.js --port port#`` to specify a **PORT**
 
-#####Unit Testing
+##### Unit Testing
 
 > Start unit testing with mocha >> **Terminal**
 
 run command ``mocha``
-
-########_we advise setting up your .env file with the testing database for this_
 
 **_______________________________________**
 
