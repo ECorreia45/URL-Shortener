@@ -1,4 +1,4 @@
-const util = require('./debug');
+const util = require('debug_utility_tool');
 
 var randomAlphaNumeric = () => {
   // const to receive new random id
@@ -12,7 +12,7 @@ var randomAlphaNumeric = () => {
     rndID += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
   }
 
-  // util.debug('info', 'New random ID created', ['10', __filename], 'OK', rndID);
+  util.debug('New random ID created', 2, rndID);
   return rndID;
 };
 

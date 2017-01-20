@@ -29,7 +29,4 @@ describe('Modules', () => {
       expect(db.seq.options.dialect).to.equal(process.env.DB_schema);
     })
   });
-  describe('Debug', () => {
-    it('Debug should be fine');
-  })
 });
