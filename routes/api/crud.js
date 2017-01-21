@@ -8,7 +8,7 @@ module.exports = (express) => {
 
   // Provide the user with the generated url
   // Populate the array with generated url and user provided url
-  router.post('/api/v1/url/:url', (req, res) => {
+  router.get('/api/v1/url/:url', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     // object of user url and shorten url
     const newUrl = {
@@ -25,7 +25,7 @@ module.exports = (express) => {
       res.status(200).json(data);
     });
     // provide the user with the new link
-    res.send(`Shorten url => ${newUrl.shortURL}`);
+    res.json({Short_URL: newUrl.shortURL });
   });
 
   // Get a single url
