@@ -1,5 +1,5 @@
 require('./modules/serverSetup');
-const util = require('./modules/debug');
+const util = require('debug_utility_tool');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -17,8 +17,8 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/')(express));
 
 const server = app.listen(process.env.PORT, () => {
-  util.debug('info', `Ready to go at port => ${process.env.PORT}`, ['19', __filename], 'OK', null);
-  util.debug('info', `Debug mode => ${process.env.DEBUG}`, ['19', __filename], 'OK', null);
+  util.debug(`Ready to go at port => ${process.env.PORT}`);
+  util.debug(`Debug mode => ${process.env.DEBUG}`);
 });
 
 module.exports = server;
