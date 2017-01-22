@@ -3,9 +3,9 @@
   "version": "1.8.0",
   "description": "This is a very simple and dynamic API that allows the user to shorten any given url. The API is promising and currently facing the very beginning phase of development.",
   "main": "server.js",
-  "engine": {
-    "node": "^6.9.1",
-    "npm": "^3.10.8"
+  "engines": {
+    "node": "v7.3.x",
+    "npm": "3.10.x"
   },
   "directories": {
     "test": "test"
