@@ -1,6 +1,8 @@
 # URL-Shortener API
 A simple static api that allows the user to shorten any url
 
+[Installation](#installation) | [Serve It](#Serve It) | [Perform CRUD](#Perform CRUD) | [Usage](#Usage) | [Coding Style](#Coding Style)
+
 >This a very exciting promising projects that intends to provide the user to take long junk of url and make it simple to share with others without it looking long, inviting and spammy.
 
 ### Installation
@@ -8,27 +10,25 @@ A simple static api that allows the user to shorten any url
 1- Download this to your localhost folder. 
 > Ex: /Sites **on mac**
 
-2- Assuming you already have node and npm installed in your machine, from terminal or command prompt navigate to this project folder
+2- Assuming you already have node and npm installed in your machine, 
+from terminal or command prompt navigate to this project folder and
+run this command
 
 ``npm install``
 
 3- Create Your .env file with followings:
 
-``DB_name = ``
+```.env
+DB_name = 
+DB_user = 
+DB_pass = 
+DB_host = localhost
+DB_schema = mysql
+DB_port = 3306
 
-``DB_user = ``
-
-``DB_pass = ``
-
-``DB_host = localhost``
-
-``DB_schema = mysql``
-
-``DB_port = 3306``
-
-``PORT = 3000``
-
-``DEBUG = false``
+PORT = 3000
+DEBUG = false
+```
 
 ### Serve it
 
@@ -42,7 +42,7 @@ This API should be running at **port 3000** at your localhost. Use this link
 
 ### Perform CRUD
 
-`` To CREATE a Link: ``  /api/v1/url/:url **POST method**
+`` To CREATE a Link: ``  /api/v1/url/:url **GET method**
 
 `` To Get ALL Links: ``  /api/v1/urls **GET method**
 
@@ -61,8 +61,6 @@ In the browser you should follow the instruction to fully enjoy this simple API
 
 run command ``node server.js --debug true`` to activate **DEBUG MODE**
 
-run command ``node server.js --debug false`` to deactivate **DEBUG MODE**
-
 > Run API from any port from  >> **Terminal**
 
 run command ``node server.js --port port#`` to specify a **PORT**
@@ -72,6 +70,16 @@ run command ``node server.js --port port#`` to specify a **PORT**
 > Start unit testing with mocha >> **Terminal**
 
 run command ``mocha``
+
+you may have to install mocha globally so run this commanc ``npm install mocha``
+
+### Coding Style
+
+This api was coded following [__airbnb js styleguide__](https://github.com/airbnb/javascript)
+so make sure your jslint/eslint supports this coding style.
+
+
+
 
 **_______________________________________**
 
