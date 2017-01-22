@@ -4,8 +4,8 @@
   "description": "This is a very simple and dynamic API that allows the user to shorten any given url. The API is promising and currently facing the very beginning phase of development.",
   "main": "server.js",
   "engine": {
-    "node": "v6.9.1",
-    "npm": "3.10.8"
+    "node": "^6.9.1",
+    "npm": "^3.10.8"
   },
   "directories": {
     "test": "test"
@@ -27,10 +27,6 @@
     "test": "mocha",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ECorreia45/URL-Shortener.git"
-  },
   "keywords": [
     "url",
     "shortner",
@@ -41,9 +37,5 @@
     "small"
   ],
   "author": "Elson Correia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ECorreia45/URL-Shortener/issues"
-  },
-  "homepage": "https://github.com/ECorreia45/URL-Shortener#readme"
+  "license": "ISC"
 }
