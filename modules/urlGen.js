@@ -1,4 +1,4 @@
-// const util = require('./debug');
+const util = require('debug_utility_tool');
 // load alphanumeric module that generates random alphanumeric id of length 5
 const randomId = require('./alphanumeric');
 
@@ -9,7 +9,7 @@ const generateUrl = (url) => {
   // generate a random alphanumeric length of 5 and add it to the new url
   newUrl += randomId();
 
-  // util.debug('info', 'Random url created', ['11', __filename], 'OK', newUrl);
+  util.debug('info', 'Random url created', ['11', __filename], 'OK', newUrl);
   return newUrl;
 };
 

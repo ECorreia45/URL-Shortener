@@ -72,10 +72,6 @@ In the browser you should follow the instruction to fully enjoy this simple API
 
 run command ``node server.js --debug true`` to activate **DEBUG MODE**
 
-> Run API from any port from  >> **Terminal**
-
-run command ``node server.js --port port#`` to specify a **PORT**
-
 #####Testing
 
 > Start unit testing with mocha >> **Terminal**
