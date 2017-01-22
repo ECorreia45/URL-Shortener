@@ -1,4 +1,3 @@
-require('./modules/serverSetup');
 const util = require('debug_utility_tool');
 const express = require('express');
 const bodyParser = require('body-parser');

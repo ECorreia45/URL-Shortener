@@ -25,7 +25,7 @@ describe('Server', () => {
   describe('CRUD', () => {
     // Test posting the data to the DB
     it('Post through /api/v1/url/:url just fine', (done) => {
-      app.post('/api/v1/url/elsoncorreia.com').expect(200).end(done);
+      app.get('/api/v1/url/elsoncorreia.com').expect(200).end(done);
     });
     // Test updating one data on DB
     it('Update through /api/v1/urls/1 just fine', (done) => {
