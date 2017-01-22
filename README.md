@@ -1,7 +1,18 @@
 # URL-Shortener API
 A simple static api that allows the user to shorten any url
 
-[Installation](#installation) | [Serve It](#Serve) | [Perform CRUD](#Perform) | [Usage](#Usage) | [Coding Style](#Coding)
+* [Installation](#installation)
+
+* [Serve](#Serve)
+
+* [CRUD](#CRUD)
+
+* [Usage](#Usage)
+
+* [Testing](#Testing)
+
+* [Coding](#Coding)
+
 
 >This a very exciting promising projects that intends to provide the user to take long junk of url and make it simple to share with others without it looking long, inviting and spammy.
 
@@ -30,7 +41,7 @@ PORT = 3000
 DEBUG = false
 ```
 
-###Serve it
+###Serve
 
 * From terminal, run this command
 
@@ -40,7 +51,7 @@ This API should be running at **port 3000** at your localhost. Use this link
 
 >_localhost:3000/_
 
-###Perform CRUD
+###CRUD
 
 `` To CREATE a Link: ``  /api/v1/url/:url **GET method**
 
@@ -65,7 +76,7 @@ run command ``node server.js --debug true`` to activate **DEBUG MODE**
 
 run command ``node server.js --port port#`` to specify a **PORT**
 
-#####Unit Testing
+#####Testing
 
 > Start unit testing with mocha >> **Terminal**
 
@@ -73,7 +84,7 @@ run command ``mocha``
 
 you may have to install mocha globally so run this commanc ``npm install mocha``
 
-###Coding Style
+###Coding_Style
 
 This api was coded following [__airbnb js styleguide__](https://github.com/airbnb/javascript)
 so make sure your jslint/eslint supports this coding style.
