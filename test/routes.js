@@ -7,9 +7,9 @@ const app = supertest('http://localhost:3000');
 // Test the server
 describe('Server', () => {
   // Test the server homepage
-  it('Server loads fine', (done) => {
-    app.get('/').expect(200).end(done);
-  });
+  // it('Server loads fine', (done) => {
+  //   app.get('/').expect(200).end(done);
+  // });
   // Test the Routes
   // describe('Routes', () => {
   //   // Test the /api endpoint
