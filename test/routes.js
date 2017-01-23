@@ -11,7 +11,7 @@ describe('Server', () => {
     app.get('/').expect(200).end(done);
   });
   // Test the Routes
-  describe('Routes', () => {
+  // describe('Routes', () => {
   //   // Test the /api endpoint
   //   it('/api loads fine', (done) => {
   //     app.get('/api').expect(200).end(done);
