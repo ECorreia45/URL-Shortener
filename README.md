@@ -93,6 +93,12 @@ so make sure your jslint/eslint supports this coding style.
 
 ###Workflow
 
+After cloning or downloading this application to your local environment do a:
+
+``git checkout deploy `` if you intend to deploy to heroku later
+
+``git checkout feature `` if you intend to run in any other server
+
 Create your development branch with this command
 
 ``git branch -b <branch-name>`` i call mine 'feature'.
@@ -110,7 +116,7 @@ and merge it to your development branch ``git merge <branch-name>``
 ###Deployment
 
 To deploy to Heroku simply jump to the release branch with ``git checkout release``
-then merge your master branch with ``git merge master`` and push it through with
+then merge your deploy branch with ``git merge deploy`` and push it through with
 ``git push origin release``.
 
 If you did good by making sure everything is fine, things should pass codeship test
