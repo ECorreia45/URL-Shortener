@@ -18,6 +18,8 @@ module.exports = (express) => {
     // util.debug(`Short URL generated from ${newUrl.url}`, 2, newUrl);
     // call the create function to add info to database
     url.create(newUrl, (err) => {
+      if (err)
+        return res.send();
       // util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {

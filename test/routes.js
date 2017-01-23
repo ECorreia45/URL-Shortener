@@ -1,50 +1,99 @@
+const util = require('debug_utility_tool');
 const expect = require('chai').expect;
-const supertest = require('supertest');
+const request = require('supertest');
 
-const app = supertest('http://localhost:3000');
+const routes = [
+  {
+    desc: 'Server should load fine',
+    path: '/',
+    meth: 'GET'
+  },
+  {
+    desc: '/api/ GET endpoint loads fine',
+    path: '/api',
+    meth: 'GET'
+  },
+  {
+    desc: '/api/v1 GET endpoint loads fine',
+    path: '/api/v1',
+    meth: 'GET'
+  },
+  {
+    desc: '/api/v1/urls GET endpoint loads fine',
+    path: '/api/v1/urls',
+    meth: 'GET'
+  },
+  {
+    desc: '/api/v1/url/:id GET endpoint loads fine',
+    path: '/api/v1/url/:id',
+    meth: 'GET'
+  },
+  {
+    desc: '/go/:shorturl GET endpoint loads fine',
+    path: '/go/:shorturl',
+    meth: 'GET'
+  },
+  {
+    desc: '/api/v1/urls/:id POST endpoint loads fine',
+    path: '/api/v1/urls/:id',
+    meth: 'POST'
+  },
+  {
+    desc: '/api/v1/urls/:id DELETE endpoint loads fine',
+    path: '/api/v1/urls/:id',
+    meth: 'DELETE'
+  },
+];
 
 /* global describe it:true */
 // Test the server
 describe('Server', () => {
-  // Test the server homepage
-  // it('Server loads fine', (done) => {
-  //   app.get('/').expect(200).end(done);
-  // });
-  // Test the Routes
-  // describe('Routes', () => {
-  //   // Test the /api endpoint
-  //   it('/api loads fine', (done) => {
-  //     app.get('/api').expect(200).end(done);
-  //   });
-  //   // Test the /api/v1 endpoint
-  //   it('/api/v1 loads fine', (done) => {
-  //     app.get('/api/v1').expect(200).end(done);
-  //   });
-  // });
-  // Test CRUD capabilities
-  // describe('CRUD', () => {
-  //   // Test posting the data to the DB
-  //   it('Post through /api/v1/url/:url just fine', (done) => {
-  //     app.get('/api/v1/url/elsoncorreia.com').expect(200).end(done);
-  //   });
-  //   // Test updating one data on DB
-  //   it('Update through /api/v1/urls/1 just fine', (done) => {
-  //     app.post('/api/v1/urls/1').set('Content-Type','application/json')
-  //       .send({ id: '2', url: 'unittest.com', shortURL: '/go/uni00ezg' })
-  //       .expect(200)
-  //       .end(done);
-  //   });
-  //   // Test getting one data from DB
-  //   it('Get url through /api/v1/urls/2 just fine', (done) => {
-  //     app.get('/api/v1/urls/2').expect(200).end(done);
-  //   });
-  //   // Test if all the data is returned
-  //   it('Get all data through /api/v1/urls just fine', (done) => {
-  //     app.get('/api/v1/urls').expect(200).end(done);
-  //   });
-  //   // Test deleting one data from DB
-  //   it('Delete through /api/v1/urls/2 just fine', (done) => {
-  //     app.delete('/api/v1/urls/2').expect(200).end(done);
-  //   });
-  // });
+
+  let server;
+  // Starts the server before each test by calling it
+  before(() => {
+    server = require('../server.js');
+  });
+  // Closes the server after each test
+  after(() => {
+    server.close();
+  });
+
+  routes.forEach( (route) => {
+
+    switch (route.meth){
+      case 'GET':
+        it(route.desc, (done) => {
+          request(server)
+            .get(route.path)
+            .set('Accept', 'application/json')
+            .set('Accept', 'text/html')
+            .expect(200)
+            .end(done);
+        });
+        util.debug(`Route: ${route.path} loads fine`, 2);
+        break;
+      case 'POST':
+        it(route.desc, (done) => {
+          request(server)
+            .get(route.path)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end(done);
+        });
+        util.debug(`Route: ${route.path} loads fine`, 2);
+        break;
+      case 'DELETE':
+        it(route.desc, (done) => {
+          request(server)
+            .get(route.path)
+            .expect(200)
+            .end(done);
+        });
+        util.debug(`Route: ${route.path} loads fine`, 2);
+        break;
+    }
+
+  })
 });
