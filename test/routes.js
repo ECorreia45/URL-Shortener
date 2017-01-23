@@ -12,15 +12,15 @@ describe('Server', () => {
   });
   // Test the Routes
   describe('Routes', () => {
-    // Test the /api endpoint
-    it('/api loads fine', (done) => {
-      app.get('/api').expect(200).end(done);
-    });
-    // Test the /api/v1 endpoint
-    it('/api/v1 loads fine', (done) => {
-      app.get('/api/v1').expect(200).end(done);
-    });
-  });
+  //   // Test the /api endpoint
+  //   it('/api loads fine', (done) => {
+  //     app.get('/api').expect(200).end(done);
+  //   });
+  //   // Test the /api/v1 endpoint
+  //   it('/api/v1 loads fine', (done) => {
+  //     app.get('/api/v1').expect(200).end(done);
+  //   });
+  // });
   // Test CRUD capabilities
   // describe('CRUD', () => {
   //   // Test posting the data to the DB
