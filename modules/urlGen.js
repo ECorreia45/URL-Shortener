@@ -9,7 +9,7 @@ const generateUrl = (url) => {
   // generate a random alphanumeric length of 5 and add it to the new url
   newUrl += randomId();
 
-  util.debug('info', 'Random url created', ['11', __filename], 'OK', newUrl);
+  util.debug('Random url created', 2, newUrl);
   return newUrl;
 };
 
