@@ -10,6 +10,8 @@ module.exports = (express) => {
       shortURL: `/go/${req.params.url}`,
     };
     go.find(url, (err) => {
+      if (err)
+        return res.send();
       util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {

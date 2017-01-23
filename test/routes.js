@@ -29,6 +29,11 @@ const routes = [
     meth: 'GET'
   },
   {
+    desc: '/go/:shorturl GET endpoint loads fine',
+    path: '/go/:shorturl',
+    meth: 'GET'
+  },
+  {
     desc: '/api/v1/urls/:id POST endpoint loads fine',
     path: '/api/v1/urls/:id',
     meth: 'POST'

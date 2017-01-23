@@ -9,7 +9,7 @@ module.exports = (express) => {
   // Provide the user with the generated url
   // Populate the array with generated url and user provided url
   router.get('/api/v1/url/:url', (req, res) => {
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'application/json');
     // object of user url and shorten url
     const newUrl = {
       url: `http://www.${req.params.url}`,
@@ -18,7 +18,9 @@ module.exports = (express) => {
     util.debug(`Short URL generated from ${newUrl.url}`, 2, newUrl);
     // call the create function to add info to database
     url.create(newUrl, (err) => {
-      // util.debug(err, 0);
+      if (err)
+        return res.send();
+      util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
       util.debug('Url created successfully', 2, data);
