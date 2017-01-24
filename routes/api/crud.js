@@ -1,7 +1,7 @@
 // import url generator module that provide with a new random url
 const generateUrl = require('../../modules/urlGen');
 const url = require('../../modules/crud');
-// const util = require('debug_utility_tool');
+const util = require('debug_utility_tool');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -15,15 +15,15 @@ module.exports = (express) => {
       url: `http://www.${req.params.url}`,
       shortURL: generateUrl(req.params.url),
     };
-    // util.debug(`Short URL generated from ${newUrl.url}`, 2, newUrl);
+    util.debug(`Short URL generated from ${newUrl.url}`, 2, newUrl);
     // call the create function to add info to database
     url.create(newUrl, (err) => {
       if (err)
         return res.send();
-      // util.debug(err, 0);
+      util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
-      // util.debug('Url created successfully', 2, data);
+      util.debug('Url created successfully', 2, data);
       res.status(200).json(data);
     });
     // provide the user with the new link
@@ -33,10 +33,10 @@ module.exports = (express) => {
   // Get a single url
   router.get('/api/v1/urls/:id', (req, res) => {
     url.find(req.params, (err) => {
-      // util.debug(err, 0);
+      util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
-      // util.debug(`url of id ${req.params.id} returned successfully`, 2, data);
+      util.debug(`url of id ${req.params.id} returned successfully`, 2, data);
       res.status(200).json(data);
     });
   });
@@ -44,10 +44,10 @@ module.exports = (express) => {
   // Get all urls
   router.get('/api/v1/urls', (req, res) => {
     url.findAll((err) => {
-      // util.debug( err, 0);
+      util.debug( err, 0);
       res.status(500).json(err);
     }, (data) => {
-      // util.debug('Urls json data returned successfully', 2, data);
+      util.debug('Urls json data returned successfully', 2, data);
       res.status(200).json(data);
     });
   });
@@ -59,7 +59,7 @@ module.exports = (express) => {
       // util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
-      // util.debug(`url of id ${req.params.id} updated successfully`, 2, data);
+      util.debug(`url of id ${req.params.id} updated successfully`, 2, data);
       res.status(200).json(data);
     });
   });
@@ -67,10 +67,10 @@ module.exports = (express) => {
   // Delete a single url
   router.delete('/api/v1/urls/:id', (req, res) => {
     url.destroy(req.params, (err) => {
-      // util.debug(err, 0);
+      util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
-      // util.debug(`url of id ${req.params.id} deleted successfully`, 2, data);
+      util.debug(`url of id ${req.params.id} deleted successfully`, 2, data);
       res.status(200).json(data);
     });
   });

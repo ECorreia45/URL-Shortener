@@ -1,5 +1,5 @@
 const go = require('../../modules/go');
-// const util = require('debug_utility_tool');
+const util = require('debug_utility_tool');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -12,7 +12,7 @@ module.exports = (express) => {
     go.find(url, (err) => {
       if (err)
         return res.send();
-      // util.debug(err, 0);
+      util.debug(err, 0);
       res.status(500).json(err);
     }, (data) => {
       res.setHeader('Content-Type', 'text/html');
